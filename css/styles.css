@@ -1,0 +1,262 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading-block {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 15px;
+    background: rgb(0,0,0);
+    color: rgb(255,255,255);
+}
+
+.heading-block--scroll {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding-top: 0;
+}
+
+.btn-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-block__btn {
+    min-width: 150px;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: rgb(255,255,255);
+    transition: border-bottom 0.2s ease;
+}
+
+.btn-block__btn:hover {
+    border-bottom: 5px solid rgb(255,255,255);
+    cursor: pointer;
+}
+
+.add-new-form {
+    display: none;
+    width: 500px;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px rgb(144,144,144);
+    border-radius: 5px;
+}
+
+.msg-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.add-new-form__caption {
+    font-size: 24px;
+}
+
+.add-new-form__input {
+    display: block;
+    margin: 0 auto 10px auto;
+    height: 30px;
+    width: 90%;
+    font-size: 17px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(144,144,144);
+    box-sizing: border-box;
+}
+
+.add-new-form__input:hover {
+    border-bottom: 5px solid rgb(107, 106, 106);
+}
+
+.photo-select {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.photo-select__btn {
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s box-shadow ease-in;
+}
+
+.photo-select__btn:hover {
+    box-shadow: 0 0 20px rgb(144,144,144);
+}
+
+.photo-select__photo {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(144,144,144);
+    object-fit: cover;
+}
+
+.add-new-form__photo {
+    margin-top: 20px;
+}
+
+.add-new-form__add-topping {
+    cursor: pointer;
+    transition: 0.2s transform;
+}
+
+.add-new-form__add-topping:hover {
+    transform: scale(1.03, 1.03);
+}
+
+.add-new-form__add-btn {
+    width: 60%;
+    height: 40px;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s border-bottom ease-in;
+}
+
+.add-new-form__add-btn:hover {
+    border-bottom: 5px solid;
+}
+
+.menu-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 95%;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+.pizza {
+    border: none;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(144,144,144);
+    transition: 0.5s transform;
+}
+
+.pizza:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.pizza__caption {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.pizza__photo {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgb(144,144,144);
+}
+
+.pizza__toppings {
+    padding: 0 3px;
+}
+
+.pizza__price {
+    font-weight: bold;
+}
+
+.pizza__remove-btn {
+    height: 40px;
+    background: none;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.1s border-bottom ease-in;
+}
+
+.pizza__remove-btn:hover {
+    border-bottom: 5px solid rgb(0,0,0);
+    cursor: pointer;
+}
+
+.pizza__remove-ask {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    box-shadow: 0 0 3px rgb(144,144,144);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pizza__remove-ask:hover {
+    box-shadow: 0 0 5px rgb(144,144,144);
+}
+
+.pizza__no-items-text {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pizza__no-items-pic {
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+    background: rgb(0,0,0);
+    font-size: 13px;
+    color: rgb(255,255,255);
+}
+
+/*Responsive*/
+@media screen and (min-width: 1600px) {
+    .menu-block {
+        width: 1300px;
+    }
+    
+    .heading-block {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .add-new-form {
+        width: 95%;
+    }
+
+    .photo-select {
+        width: 100%;
+    }
+
+    .photo-select__photo {
+        width: 80%;
+    }
+}
