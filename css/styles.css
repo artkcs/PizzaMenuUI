@@ -1,14 +1,26 @@
+html, body {
+    height: 100%;
+}
 body
 {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 .heading-block {
+    position: sticky;
+    top: 0;
     display: flex;
     gap: 15px;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 0;
     padding-top: 15px;
@@ -17,8 +29,6 @@ body
 }
 
 .heading-block--scroll {
-    position: fixed;
-    top: 0;
     z-index: 1;
     padding-top: 0;
 }
@@ -50,7 +60,7 @@ body
     display: none;
     width: 500px;
     text-align: center;
-    margin: 15px auto 0 auto;
+    margin: 25px auto 0 auto;
     padding-top: 5px;
     padding-bottom: 10px;
     box-shadow: 0 0 10px rgb(144,144,144);
@@ -227,6 +237,7 @@ body
 }
 
 .footer-block {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-content: center;

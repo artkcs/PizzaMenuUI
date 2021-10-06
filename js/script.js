@@ -14,15 +14,15 @@ $(document).ready(function() {
     $(document).scroll(function() {
         var dist = $(this).scrollTop();
 
-        if (dist > 100) {
+        if (dist > 5) {
             $(".heading-block").addClass("heading-block--scroll");
             $(".heading-block__logo").hide();
         }
 
         else {
-            $(".heading-block").removeClass("heading-block--scroll");
-            $(".heading-block__logo").show();
-        }
+                $(".heading-block").removeClass("heading-block--scroll");
+                $(".heading-block__logo").show();
+            }
     });
 
     //Selecting photo for a new pizza
@@ -170,7 +170,6 @@ $(document).ready(function() {
 
     $("body").on('click', '.pizza__remove-btn', function() {
         var pizzaToRemoveIdx = $(this).parent().index();
-        console.log(pizzaToRemoveIdx);
 
         //Disable deleting other elements while deleting current
         $(".pizza__remove-btn").each(function(){
